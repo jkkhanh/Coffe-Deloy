@@ -28,17 +28,17 @@ const links = [
 
 const NotFound = () => {
   return (
-    <div className='w-full h-[100vh] flex items-center'>
+    <div className='w-full h-[120vh] flex items-center'>
         <div className='mx-auto'>
             <h1 className='text-[80px] text-blue-500 font-semibold text-center'>404</h1>
-            <p className='mb-8 font-semibold text-center italic'>Xin lỗi, đường dẫn này không tồn tại, vui lòng kiểm tra lại.</p>
+            <p className=' font-semibold text-center italic'>Xin lỗi, đường dẫn này không tồn tại, vui lòng kiểm tra lại.</p>
             <div className='p-6 flex flex-col gap-6'>
                 {
                     links.map((item,index) =>(
                         <div key={index} className='border rounded-lg py-2 px-2 hover:scale-110 hover:bg-blue-300 transition-all duration-500'>
                             <Link to = {item.href} >
                                 <div className='flex items-center gap-8'>
-                                    <img src={item.img} alt='' className='w-20'/>
+                                    <img src={item.img} alt='' className='w-16'/>
                                     <div className='flex flex-col'>
                                         <p className='font-semibold text-blue-500'>{item.name}</p>
                                         <p className='font-semibold text-gray-500 italic'>{item.description}</p>
