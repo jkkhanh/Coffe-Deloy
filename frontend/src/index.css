@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes spin {
+    from {
+        transform:  rotate(0deg);
+    }
+    to {
+        transform:  rotate(360deg);
+    }
+}
+
+.spin {
+    animation: spin 35s linear infinite;
+}
+
+
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; 
+    left: 50%; 
+    margin-left: -6px; 
+    border-width: 6px; 
+    border-style: solid;
+    border-color: transparent transparent white transparent; 
+    transform: rotate(180deg);
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Hiển thị 2 dòng */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+
+
+
+
+
+
+
+  
+
+  
