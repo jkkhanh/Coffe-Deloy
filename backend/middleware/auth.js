@@ -8,7 +8,7 @@ const authUser = async (req,res,next) => {
     if (!token) {
         return res.json({
             success: false,
-            message: "Not authorized login again"
+            message: "Vui lòng đăng nhập"
         })
     }
 
