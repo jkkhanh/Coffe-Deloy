@@ -15,6 +15,8 @@ const Product = () => {
   const {productId} = useParams()
   const [productData, setProductData] = useState(false)
   const [image, setImage] = useState('')
+  
+
 
   const fetchProductData = async () => {
     products.map((item) => {

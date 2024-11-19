@@ -12,6 +12,7 @@ import { useContext } from 'react';
 import { ShopContext } from '../context/ShopContext';
 
 
+
 const Nabvbar = () => {
     
      const {getCartCount, token, setToken, setCartItems} = useContext(ShopContext)
