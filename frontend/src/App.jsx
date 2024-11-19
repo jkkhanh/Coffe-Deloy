@@ -17,6 +17,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Order from './pages/Order';
 import Cart from './pages/Cart';
 import PlaceOder from './pages/PlaceOder';
+import NotFound from './pages/NotFound';
 
 
 const bgImage = {
@@ -31,6 +32,7 @@ const App = () => {
 
   const location = useLocation()
   const isLoginPage = location.pathname === '/login';
+  const isNotFoundPage = location.pathname === '/not-found';
 
 
   useEffect(() => {
@@ -56,6 +58,7 @@ const App = () => {
           <Route path='/place-order' element = {<PlaceOder />} />
           <Route path='/orders' element = {<Order />} />
           <Route path= '/login' element = {<Login />} />
+          <Route path='*' element = {<NotFound />} />
         </Routes>
         { !isLoginPage && <Fotter />}
         <ToastContainer autoClose = {1000} position="top-center" />
