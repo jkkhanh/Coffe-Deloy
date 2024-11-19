@@ -31,7 +31,19 @@ const Hero = () => {
               wrapper="span" // Kiểu bao bọc (span/p/div)
               repeat={0} // Chạy một lần
             /></p>
-          <Link to = '/menu'><button className='px-6 w-56 py-3 font-semibold text-lg bg-blue-500 rounded-full mt-5 text-white hover:scale-110 transition-all duration-300' data-aos = 'zoom-in' data-aos-duration="1000">Xem thực đơn</button></Link>
+          <Link to = '/menu' className='w-64'>
+            <button class="relative mt-6 group border-none bg-transparent p-0 outline-none cursor-pointer font-mono font-light uppercase text-base">
+              <span class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-25 rounded-lg transform translate-y-0.5 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:translate-y-1 group-hover:duration-[250ms] group-active:translate-y-px"></span>
+              <span class="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-l from-[hsl(217,33%,16%)] via-[hsl(217,33%,32%)] to-[hsl(217,33%,16%)]"></span>
+              <div class="relative flex items-center justify-between py-3 px-6 text-lg text-white rounded-lg transform -translate-y-1 bg-gradient-to-r from-orange-700 bg-orange-600 to-yellow-600 gap-3 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:-translate-y-1.5 group-hover:duration-[250ms] group-active:-translate-y-0.5 brightness-100 group-hover:brightness-110">
+                <span class="select-none">Xem thực đơn</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 ml-2 -mr-1 transition duration-250 group-hover:translate-x-1">
+                  <path clip-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fill-rule="evenodd"></path>
+                </svg>
+              </div>
+            </button>
+          </Link>
+
 
         </div>
         <div className='flex w-1/2 items-center justify-center relative '>
