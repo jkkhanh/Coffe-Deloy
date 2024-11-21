@@ -4,6 +4,7 @@ import Intro from '../components/Intro'
 import DiscoverMenu from '../components/DiscoverMenu'
 import FeaturedProducts from '../components/FeaturedProducts'
 import Question from '../components/Question'
+import Reviews from './../components/Reviews';
 
 
 
@@ -16,6 +17,7 @@ const Home = () => {
       <DiscoverMenu />
       <FeaturedProducts />
       <Question />
+      <Reviews />
     </div>
   )
 }
