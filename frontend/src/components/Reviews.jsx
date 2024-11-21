@@ -48,15 +48,13 @@ const Reviews = () => {
         <div>
           <Slider {...settings}>
             {testRiviewer.map((item) => (
-              <div key={item.id} className="px-3 py-5" data-aos="fade-up" data-aos-delay={`${item.id * 400}`}>
-                <div className="py-3 px-6 h-56 rounded-xl border shadow-md">
+              <div key={item.id} className="px-4 py-5" data-aos="fade-up" data-aos-delay={`${item.id * 400}`}>
+                <div className="py-3 px-6 h-56 rounded-xl border shadow-md hover:scale-105 transition-all duration-500 hover:bg-blue-500 hover:text-white group">
                   <div className="flex items-center gap-6">
                     <img src={item.img} alt="" className="w-16 h-16 rounded-full"/>
                     <div>
-                      <p>{item.name}</p>
-                      <p className="text-sm italic text-gray-600 font-semibold">
-                        Người dùng ở quán
-                      </p>
+                      <p className="group-hover:text-white transition-colors duration-500">{item.name}</p>
+                      <p className="text-sm italic text-gray-600 font-semibold group-hover:text-white transition-colors duration-500"> Người dùng ở quán</p>
                     </div>
                   </div>
                   <p className="mt-6">"{item.text}"</p>
