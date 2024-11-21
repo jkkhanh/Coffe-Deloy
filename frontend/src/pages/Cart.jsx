@@ -76,7 +76,7 @@ const Cart = () => {
                             cartData.length > 0 ? (
                                 <button onClick={() => navigate('/place-order')} className='w-[50%] bg-blue-500 py-3 mt-8 text-white'>Thực hiện thanh toán</button>
                             ) : (
-                                <button disabled className='w-[50%] bg-blue-500 py-3 mt-8 text-white cursor-not-allowed'>Không thể thanh toán</button> 
+                                <button disabled className='w-[50%] bg-blue-500 py-3 mt-8 text-white cursor-not-allowed opacity-60'>Không thể thanh toán</button> 
                             )
                         }
                     </div>

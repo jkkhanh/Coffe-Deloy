@@ -25,19 +25,23 @@ const Nabvbar = () => {
         navigate('/login')
      }
 
-        const getUserCart = async (token) => {
-        try {
+    // const getUserCart = async (token) => {
+    //     try {
             
-            const response = await axios.post(backendUrl + '/api/cart/get', {}, {headers:{token}})
-            if (response.data.success) {
-                setCartItems(response.data.cartData)
-            }
-        } catch (error) {
-            console.log(error);
-            toast.error(error.message)
-        }
-    }
+    //         const response = await axios.post(backendUrl + '/api/cart/get', {}, {headers:{token}})
+    //         if (response.data.success) {
+    //          setCartItems(response.data.cartData)
+    //         }
+    //     } catch (error) {
+    //         console.log(error);
+    //         toast.error(error.message)
+    //     }
+    // }
+    const [activeIndex, setActiveIndex] = useState(null);
 
+    const handleClick = (index) => {
+      setActiveIndex(index);
+    };
     
 
   return (
@@ -50,12 +54,13 @@ const Nabvbar = () => {
                         <p className=' font-semibold text-xl font-cursive text-white'>Coffe Home</p>
                     </Link>
                     <div className='ml-40'>
-                        <ul className='flex items-center gap-6'>
-                            <NavLink to = '/' className={({isActive}) => `flex items-center gap-2 font-semibold px-3 py-1.5 cursor-pointer rounded-full transition-all duration-300 ${isActive ? 'bg-blue-500 text-white scale-110' : 'hover:scale-110 hover:text-white hover:bg-blue-500'}`}><FaHome  className='text-lg'/>Trang chủ</NavLink>
-                            <NavLink to ='/menu' className={({isActive}) => `flex items-center gap-2 font-semibold px-3 py-1.5 cursor-pointer rounded-full transition-all duration-300 ${isActive ? 'bg-blue-500 text-white scale-110' : 'hover:scale-110 hover:text-white hover:bg-blue-500'}`}><IoMdMenu  className='text-lg'/>Thực đơn</NavLink>
-                            <NavLink to = '/about' className={({isActive}) => `flex items-center gap-2 font-semibold px-3 py-1.5 cursor-pointer rounded-full transition-all duration-300 ${isActive ? 'bg-blue-500 text-white scale-110' : 'hover:scale-110 hover:text-white hover:bg-blue-500'}`}><FiCoffee  className='text-lg'/>Về chúng tôi</NavLink>
-                            <NavLink to = '/contact' className={({isActive}) => `flex items-center gap-2 font-semibold px-3 py-1.5 cursor-pointer rounded-full transition-all duration-300 ${isActive ? 'bg-blue-500 text-white scale-110' : 'hover:scale-110 hover:text-white hover:bg-blue-500'}`}><RiContactsLine   className='text-lg'/> Liên hệ</NavLink>
-                            <NavLink to  = '/datban' className={({isActive}) => `flex items-center gap-2 font-semibold px-3 py-1.5 cursor-pointer rounded-full transition-all duration-300 ${isActive ? 'bg-blue-500 text-white scale-110' : 'hover:scale-110 hover:text-white hover:bg-blue-500'}`}><FaCoffee  className='text-lg'/>Đặt bàn</NavLink>
+                        <ul className='flex items-center gap-6 relative'>
+                            <NavLink  to = '/' className={({isActive}) => `flex items-center gap-2 font-semibold px-3 py-1.5 cursor-pointer rounded-full transition-all duration-300 relative z-10 ${isActive ? 'bg-blue-500 text-white scale-110' : 'hover:scale-110 hover:text-white hover:bg-blue-500'}`}><FaHome  className='text-lg'/>Trang chủ</NavLink>
+                            <NavLink to ='/menu' className={({isActive}) => `flex items-center gap-2 font-semibold px-3 py-1.5 cursor-pointer rounded-full transition-all duration-300 relative z-10  ${isActive ? 'bg-blue-500 text-white scale-110' : 'hover:scale-110 hover:text-white hover:bg-blue-500'}`}><IoMdMenu  className='text-lg'/>Thực đơn</NavLink>
+                            <NavLink to = '/about' className={({isActive}) => `flex items-center gap-2 font-semibold px-3 py-1.5 cursor-pointer rounded-full transition-all duration-300 relative z-10  ${isActive ? 'bg-blue-500 text-white scale-110' : 'hover:scale-110 hover:text-white hover:bg-blue-500'}`}><FiCoffee  className='text-lg'/>Về chúng tôi</NavLink>
+                            <NavLink to = '/contact' className={({isActive}) => `flex items-center gap-2 font-semibold px-3 py-1.5 cursor-pointer rounded-full transition-all duration-300 relative z-10 ${isActive ? 'bg-blue-500 text-white scale-110' : 'hover:scale-110 hover:text-white hover:bg-blue-500'}`}><RiContactsLine   className='text-lg'/> Liên hệ</NavLink>
+                            <NavLink to  = '/datban' className={({isActive}) => `flex items-center gap-2 font-semibold px-3 py-1.5 cursor-pointer rounded-full transition-all duration-300 relative z-10 ${isActive ? 'bg-blue-500 text-white scale-110' : 'hover:scale-110 hover:text-white hover:bg-blue-500'}`}><FaCoffee  className='text-lg'/>Đặt bàn</NavLink>
+                            {/* <div className='absolute -top-[2px] -left-2 w-[135px] h-[40px] bg-blue-600 rounded-full animated'></div> */}
                         </ul>
                     </div>
                 </div>
