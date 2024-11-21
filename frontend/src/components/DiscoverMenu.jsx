@@ -11,7 +11,12 @@ const bgDis = {
     backgroundPosition: 'bottom',
     backgroundSize: 'cover',
  
-  }
+}
+
+  const formatPrice = (price) => {
+    return price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+  };
+  
 
 const DiscoverMenu = () => {
 
@@ -32,7 +37,7 @@ const DiscoverMenu = () => {
                             <div className='flex flex-col w-full'>
                                 <div className='flex w-full justify-between items-center'>
                                    <Link to={`/product/${item._id}`}> <p className='text-xl font-semibold text-orange-500'>{item.name}</p></Link>
-                                    <p className='text-xl font-semibold text-orange-500'>{item.price}</p>
+                                    <p className='text-xl font-semibold text-orange-500'>{formatPrice(item.price)}</p>
                                 </div>
                                 <div className="border-t-[3px] border-dashed border-white mt-1"></div>      
                                 <p className='text-base text-white font-semibold mt-1'>{item.description}</p>
