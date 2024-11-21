@@ -38,7 +38,7 @@ const Reviews = () => {
     infinite: true,
     speed: 1000,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
   };
 
   return (
