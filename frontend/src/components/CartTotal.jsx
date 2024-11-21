@@ -10,7 +10,9 @@ const formatPrice = (price) => {
 
 const CartTotal = () => {
 
-    const {ship, getCartAmount} = useContext(ShopContext)
+    const {ship, getCartAmount, cartItems} = useContext(ShopContext)
+    const cartData = Object.values(cartItems).filter(quantity => quantity > 0); // Tính số sản phẩm trong giỏ hàng (cartData)
+    
 
   return (
     <div className='w-[500px]'>
@@ -23,7 +25,7 @@ const CartTotal = () => {
             <hr />
             <div className='flex justify-between'>
                 <p className='font-semibold'>Tiền ship:</p>
-                <p>{formatPrice(ship)}</p>
+                <p>{cartData.length > 0 ? formatPrice(ship) : '0đ'}</p>
             </div>
             <hr />
             <div className='flex justify-between'>

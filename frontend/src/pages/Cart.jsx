@@ -72,7 +72,13 @@ const Cart = () => {
                 <div>
                     <CartTotal />
                     <div className='flex justify-end'>
-                        <button onClick={() => navigate('/place-order')} className='w-[50%] bg-blue-500 py-3 mt-8 text-white'>Thực hiện thanh toán</button>
+                        {
+                            cartData.length > 0 ? (
+                                <button onClick={() => navigate('/place-order')} className='w-[50%] bg-blue-500 py-3 mt-8 text-white'>Thực hiện thanh toán</button>
+                            ) : (
+                                <button disabled className='w-[50%] bg-blue-500 py-3 mt-8 text-white cursor-not-allowed'>Không thể thanh toán</button> 
+                            )
+                        }
                     </div>
                 </div>
             </div>
