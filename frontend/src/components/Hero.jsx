@@ -31,7 +31,7 @@ const Hero = () => {
               wrapper="span" // Kiểu bao bọc (span/p/div)
               repeat={0} // Chạy một lần
             /></p>
-          <Link to = '/menu' className='w-64'>
+          <Link to = '/menu' className='w-64' data-aos="zoom-in" data-aos-duration="1000">
             <button class="relative mt-6 group border-none bg-transparent p-0 outline-none cursor-pointer font-mono font-light uppercase text-base">
               <span class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-25 rounded-lg transform translate-y-0.5 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:translate-y-1 group-hover:duration-[250ms] group-active:translate-y-px"></span>
               <span class="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-l from-[hsl(217,33%,16%)] via-[hsl(217,33%,32%)] to-[hsl(217,33%,16%)]"></span>
