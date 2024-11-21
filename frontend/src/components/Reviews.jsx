@@ -44,9 +44,7 @@ const Reviews = () => {
   return (
     <div className="w-[1500px] mx-auto">
       <div className="px-10 py-10 mt-16">
-        <h1 className="text-center font-semibold text-3xl mb-10">
-          NHẬN XÉT NGƯỜI DÙNG
-        </h1>
+        <h1 className="text-center font-semibold text-3xl mb-10">NHẬN XÉT NGƯỜI DÙNG</h1>
         <div>
           <Slider {...settings}>
             {testRiviewer.map((item) => (
